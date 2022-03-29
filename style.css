@@ -1,3 +1,80 @@
-h1 {
-    color: green
+/* light green #7ed56f
+medium green #55c57a
+dark green #28b485 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 10px;
+}
+
+.header {
+    position: relative;
+    height: 85vh;
+    background-image:linear-gradient(to right, rgba(0, 0, 255, 0.432), rgba(255, 255, 0, 0.568)), url(/images/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 1%, 100% 0%, 100% 78%, 0 100%);
+    
+}
+.logobox {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+}
+.logo {
+    height: 50px;
+
+}
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.heading {
+    color: #fff;
+    text-transform: uppercase; 
+
+}
+.heading-primary {
+    display: block;
+    font-size: 40px;
+    font-family: 600;
+    letter-spacing: 37px;
+    animation-name: moveleft;
+    animation-duration: 5s;
+
+}
+.heading-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17px;
+
+}
+
+@keyframes moveleft  {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+
+    }
+    70% {
+
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+
+    }
 }
