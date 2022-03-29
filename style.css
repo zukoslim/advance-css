@@ -40,36 +40,118 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 .heading {
     color: #fff;
     text-transform: uppercase; 
+    backface-visibility: hidden;
+    margin-bottom: 15px;
 
 }
 .heading-primary {
     display: block;
-    font-size: 40px;
+    font-size: 2rem;
     font-family: 600;
-    letter-spacing: 37px;
+    letter-spacing: 20px;
     animation-name: moveleft;
-    animation-duration: 5s;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
 
 }
 .heading-sub{
     display: block;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 400;
-    letter-spacing: 17px;
+    letter-spacing: 5px;
+    animation-name: moveright;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
 
+
+}
+.btn:link,
+.btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.3s;
+    position: relative;
+
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+
+}
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%; 
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 2s ease-in;
+}
+.btn-white::after {
+    background-color: #fff,
+
+}
+.btn:hover::after{
+    transform: scaleX(1.5);
+    opacity: 0;
+
+}
+@media screen and (min-width: 768px) {
+    .heading-primary {
+        letter-spacing: 35px;
+        font-size: 3rem;
+    }
+    .heading-sub {
+        font-size: 1.8rem;
+        letter-spacing: 17px;
+    }
+    
 }
 
 @keyframes moveleft  {
     0% {
         opacity: 0;
-        transform: translate(-100px);
+        transform: translateX(-100px);
 
     }
     70% {
+        transform: translateX(10px);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+@keyframes moveright  {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+    70% {
+        transform: translateX(-10px);
 
     }
     100% {
