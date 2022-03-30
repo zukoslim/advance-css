@@ -1,0 +1,32 @@
+.about-heading {
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient( to right, rgb(0, 0, 255), rgb(255, 255, 0));
+    -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: skewY(3deg) skewX(15DEG) scale(1.2);
+        text-shadow: .5rem .1rem .2rem rgba($color: #000000, $alpha: .2);
+    }
+}
+
+.about-head-tag {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px; 
+
+}
+.about-paragraph{
+    font-size: 1.6rem;
+    font-weight: 400;
+  margin-bottom: 15px;
+}

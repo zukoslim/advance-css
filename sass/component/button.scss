@@ -1,0 +1,83 @@
+.btn:link,
+.btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.3s;
+    position: relative;
+
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+
+}
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%; 
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 2s;
+}
+.btn-white::after {
+    background-color: #fff,
+
+}
+.btn:hover::after{
+    transform: scaleX(1.5) scaleY(1.7);
+    opacity: 0;
+    color: blue;
+}
+.btn-animated {
+    animation: movebottom 0.3s ease-out .7s;
+    animation-fill-mode: backwards;
+}
+@media screen and (min-width: 768px) {
+    .heading-primary {
+        letter-spacing: 35px;
+        font-size: 3rem;
+    }
+    .heading-sub {
+        font-size: 1.8rem;
+        letter-spacing: 17px;
+    }
+    
+}
+.btn-text{
+    font-size: 1.6rem;
+    display: inline-block;
+    text-decoration: none;
+    color: blue;
+    padding: 10px 20px;
+    background: #ccc;
+    border-radius: 10px;
+    border-bottom: 1px solid blue ;
+    transition: all .3s;
+}
+.btn-text:hover{
+    background-image: linear-gradient(to right, blue, yellow);
+    color: white;
+    box-shadow: 0 0 0 3px rgb(201, 162, 162);
+    transform: translateY(-5px);
+}
+.btn-text:active {
+    box-shadow: 0 0 0 3px rgb(201, 162, 162);
+    transform: translateY(0);
+
+}
